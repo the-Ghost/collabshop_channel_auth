@@ -8,6 +8,7 @@ $channel = $_REQUEST['channel'];
 $event = $_REQUEST['event'];
 $payload = $_REQUEST['payload'];
 
-$pusher->trigger('my-channel', 'my-event', json_decode($payload));
+
+$pusher->trigger($channel , $event , json_decode($payload));
 
 echo '{ "status" : "send" }';
