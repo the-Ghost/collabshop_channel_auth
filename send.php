@@ -10,13 +10,15 @@ $event = $_REQUEST['event'];
 $meta = $_REQUEST['meta'];
 $action = $_REQUEST['action'];
 $pageType = $_REQUEST['pageType'];
+$bundle = $_REQUEST['bundle'];
 
 $payload = array( 
 	"channel" => $channel ,
 	"event" => $event ,
 	"meta" => json_decode($meta) ,
 	"action" => json_decode($action) , 
-	"pageType" => json_decode($pageType)
+	"pageType" => json_decode($pageType),
+	"bundle" => json_decode($bundle)
 	);
 
 $pusher->trigger($channel , $event , $payload);
