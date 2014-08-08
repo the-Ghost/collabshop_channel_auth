@@ -12,6 +12,8 @@ $action = $_REQUEST['action'];
 $pageType = $_REQUEST['pageType'];
 
 $payload = array( 
+	"channel" => $channel ,
+	"event" => $event ,
 	"meta" => json_decode($meta) ,
 	"action" => json_decode($action) , 
 	"pageType" => json_decode($pageType)
